@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  width: 360px;
+  background: #f4f4f4;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+}
+
+.header {
+  background: #4b4bd6;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.dots {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.qr-card {
+  background: linear-gradient(135deg, #29c7ff, #2be1d3);
+  border-radius: 16px;
+  padding: 20px;
+  width: 90%;
+  margin: auto;
+}
+
+.qr-img {
+  width: 160px;
+  height: 160px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.qr-text {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #000;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  padding: 16px;
+}
+
+.service {
+  background: white;
+  border-radius: 14px;
+  padding: 14px 6px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.service span {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.transactions {
+  background: white;
+  margin: 10px;
+  border-radius: 14px;
+  padding: 10px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.transaction:last-child {
+  border-bottom: none;
+}
+
+.date {
+  display: block;
+  font-size: 11px;
+  color: gray;
+  margin-top: 3px;
+}
+
+.plus {
+  color: green;
+  font-weight: bold;
+}
+
+.minus {
+  color: red;
+  font-weight: bold;
+}
