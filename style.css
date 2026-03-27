@@ -1,114 +1,140 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+/* Importation d'une police similaire à celle du design */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --red: #C61A2B;
+    --dark: #1A1A1A;
+    --bg-light: #F2EFE9;
 }
 
 body {
-  background: #000;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--dark);
+    overflow-x: hidden;
 }
 
-.app {
-  width: 360px;
-  background: #f4f4f4;
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+/* Header & Nav */
+header {
+    padding: 20px 5%;
 }
 
-.header {
-  background: #4b4bd6;
-  padding: 20px;
-  text-align: center;
-  color: white;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.dots {
-  font-size: 14px;
-  margin-bottom: 12px;
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
-.qr-card {
-  background: linear-gradient(135deg, #29c7ff, #2be1d3);
-  border-radius: 16px;
-  padding: 20px;
-  width: 90%;
-  margin: auto;
+.logo-h {
+    background-color: var(--red);
+    color: white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }
 
-.qr-img {
-  width: 160px;
-  height: 160px;
-  background: white;
-  padding: 10px;
-  border-radius: 10px;
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
 }
 
-.qr-text {
-  margin-top: 8px;
-  font-size: 14px;
-  color: #000;
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
-.services {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  padding: 16px;
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 50px 5% 0 8%;
+    min-height: 80vh;
 }
 
-.service {
-  background: white;
-  border-radius: 14px;
-  padding: 14px 6px;
-  text-align: center;
-  font-size: 13px;
+.hero-content {
+    flex: 1;
+    max-width: 600px;
 }
 
-.service span {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 6px;
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
 }
 
-.transactions {
-  background: white;
-  margin: 10px;
-  border-radius: 14px;
-  padding: 10px;
+.hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    color: #444;
 }
 
-.transaction {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px solid #eee;
-  font-size: 14px;
+/* Boutons */
+.cta-buttons {
+    display: flex;
+    gap: 20px;
 }
 
-.transaction:last-child {
-  border-bottom: none;
+.btn {
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.date {
-  display: block;
-  font-size: 11px;
-  color: gray;
-  margin-top: 3px;
+.btn-red {
+    background-color: var(--red);
+    color: white;
 }
 
-.plus {
-  color: green;
-  font-weight: bold;
+.btn-outline {
+    border: 1px solid var(--red);
+    color: var(--red);
 }
 
-.minus {
-  color: red;
-  font-weight: bold;
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Section Image et Cercles */
+.hero-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    height: 80vh;
+    z-index: 2;
+    position: relative;
+}
+
+.red-circle {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: var(--red);
+    border-radius: 50%;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-40%);
+    z-index: 1;
 }
